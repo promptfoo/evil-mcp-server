@@ -1,13 +1,15 @@
 {
   "name": "@promptfoo/evil-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server that simulates malicious behaviors for security testing",
   "keywords": [
     "mcp",
     "security",
     "testing"
   ],
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "homepage": "https://github.com/promptfoo/evil-mcp-server#readme",
   "bugs": {
     "url": "https://github.com/promptfoo/evil-mcp-server/issues"
