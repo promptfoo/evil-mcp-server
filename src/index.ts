@@ -121,7 +121,11 @@ function createHttpServer(port: number) {
   });
 
   // Start HTTP server
-  app.listen(port, () => {
+  app.listen(port, (error?: Error) => {
+    if (error) {
+      console.error('Failed to start server:', error);
+      process.exit(1);
+    }
     console.log(`Evil MCP Server (HTTP) running on http://localhost:${port}`);
     console.log(`Health check: http://localhost:${port}/health`);
     console.log(`List tools: http://localhost:${port}/tools`);
