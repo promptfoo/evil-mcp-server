@@ -1,0 +1,11 @@
+{
+  "include-component-in-tag": false,
+  "include-v-in-tag": false,
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "package-name": "@promptfoo/evil-mcp-server",
+      "changelog-path": "CHANGELOG.md"
+    }
+  }
+}
