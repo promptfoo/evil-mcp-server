@@ -1,5 +1,10 @@
 name: CI
 
+permissions:
+  contents: read
+  checks: read
+  statuses: read
+
 on:
   push:
     branches: [main]
@@ -31,3 +36,16 @@ jobs:
 
       - name: Build
         run: npm run build
+
+  ci-success:
+    name: CI Success
+    runs-on: ubuntu-latest
+    needs: [build]
+    if: always()
+    timeout-minutes: 5
+    steps:
+      - name: Wait for all PR checks to complete
+        uses: promptfoo/.github/.github/actions/ci-success@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          timeout-seconds: 300
