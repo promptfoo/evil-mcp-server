@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
@@ -45,7 +45,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Wait for all PR checks to complete
-        uses: promptfoo/.github/.github/actions/ci-success@main
+        uses: promptfoo/.github/.github/actions/ci-success@06453faf6e513174f5ee0b340bac7cdfa41bf437 # main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           timeout-seconds: 300
