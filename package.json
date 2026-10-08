@@ -33,6 +33,7 @@
     "start:dev": "tsx src/index.ts",
     "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit",
+    "test": "node --test",
     "prepare": "npm run build",
     "run:stdio": "npm install && tsx src/index.ts",
     "run:http": "npm install && tsx src/index.ts --http"
@@ -40,8 +41,7 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.15.0",
     "express": "^5.0.0",
-    "zod": "^4.0.0",
-    "zod-to-json-schema": "^3.23.5"
+    "zod": "^4.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",

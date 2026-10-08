@@ -37,6 +37,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Test MCP integration
+        run: npm test
+
   ci-success:
     name: CI Success
     runs-on: ubuntu-latest
